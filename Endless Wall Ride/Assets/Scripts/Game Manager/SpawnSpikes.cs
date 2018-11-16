@@ -6,6 +6,8 @@ public class SpawnSpikes : MonoBehaviour {
 
     public GameObject spikeRow;
     public bool canSpawn = true;
+    public int lastSpike;
+    public int preLastSpike;
 
 	// Use this for initialization
 	void Start () {

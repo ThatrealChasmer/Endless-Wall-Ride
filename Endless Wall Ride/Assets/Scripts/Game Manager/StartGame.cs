@@ -10,7 +10,11 @@ public class StartGame : MonoBehaviour {
         int rand = Random.Range(0, 2);
 		if(rand == 0)
         {
-            Instantiate(player, new Vector3(-2.125f, 0, 0), Quaternion.identity);
+            Instantiate(player, new Vector3(-2.25f, 0, 0), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(player, new Vector3(2.25f, 0, 0), Quaternion.identity);
         }
 	}
 	
