@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -12,11 +13,15 @@ public class Player : MonoBehaviour {
     private Vector3 rightPosition;
     private Vector3 startPosition;
     private Vector3 endPosition;
+    public GameObject gameManager;
 
     // Use this for initialization
     void Start() {
         rightPosition = new Vector3(2.25f, 0, 0);
         leftPosition = new Vector3(-2.25f, 0, 0);
+
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+        Debug.Log(gameManager.name);
     }
 
     // Update is called once per frame
@@ -78,7 +83,13 @@ public class Player : MonoBehaviour {
     {
         if (collision.GetComponent<Collider2D>().CompareTag("Spike"))
         {
-            Destroy(gameObject);
+            Time.timeScale = 1;
+            Static.score = gameManager.gameObject.GetComponent<UIHandler>().score;
+            if(Static.score > Static.highscore)
+            {
+                Static.highscore = Static.score;
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

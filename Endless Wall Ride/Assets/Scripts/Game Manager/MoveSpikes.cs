@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveSpikes : MonoBehaviour {
 
@@ -12,12 +13,12 @@ public class MoveSpikes : MonoBehaviour {
 
     private float journeyLength;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         startPosition = transform.position;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startPosition, endPosition);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

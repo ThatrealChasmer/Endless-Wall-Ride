@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114011342381307352}
   - component: {fileID: 114080767388545472}
   - component: {fileID: 114072220141470274}
+  - component: {fileID: 114033502818863938}
   m_Layer: 0
   m_Name: SpikeRow
   m_TagString: Untagged
@@ -57,6 +58,17 @@ MonoBehaviour:
   spikeLeft: {fileID: 1605410756008830, guid: 78a3cd7693f5eef4eb2872cb857c79aa, type: 2}
   spikeRight: {fileID: 1781930948542794, guid: cbb1c67f872a2e940856f9d41397356f, type: 2}
   spikeRow: {fileID: 0}
+--- !u!114 &114033502818863938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992805938099928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e59907fc99fc9d4b9cdb75c9b00b145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114072220141470274
 MonoBehaviour:
   m_ObjectHideFlags: 1
